@@ -6,6 +6,7 @@ using namespace std;
 
 int
 main() {
+
    // cout <<read_word(cin) <<endl;
    // Scheme scheme = parse_scheme(cin);
    // cout << scheme << endl;
@@ -18,5 +19,10 @@ main() {
     add_transit(&s, &s);
     add_transit(&s, &s);
     cout << s << endl;
+
+
+    Scheme scheme = parse_scheme(cin);
+    cout << scheme << endl;
+    return 0;
 
 }
