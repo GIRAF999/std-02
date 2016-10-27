@@ -2,8 +2,7 @@
 
 using namespace std;
 
-Line*find_line(Lines& lines, const string& name)
-
+Line*
 find_line(Lines& lines, const string& name) {
     // TODO: искать линию под названием `name` в списке `lines`/
  Line*curtline = lines.first;
@@ -19,7 +18,12 @@ find_line(Lines& lines, const string& name) {
 Line*
 add_line(Lines& lines, const string& name) {
     // TODO: добавить линию под названием `name` в конец списка `lines`.
-    return nullptr;
+        Line* line_add_end = new Line;
+        line_add_end -> name = line_name;
+        line_add_end -> next = nullptr;
+        lines.last -> next = line_add_end;
+        lines.last = line_add_end;
+            return nullptr;
 }
 
 Line*
