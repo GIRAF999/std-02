@@ -5,7 +5,7 @@ using namespace std;
 Line*
 find_line(Lines& lines, const string& name) {
     // TODO: искать линию под названием `name` в списке `lines`/
- Line*curtline = lines.first;
+ Line* curtline = lines.first;
 	while(curtline != nullptr)
     {
 		if (curtline -> name == name)
