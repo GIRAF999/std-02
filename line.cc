@@ -23,11 +23,23 @@ add_line(Lines& lines, const string& name) {
         line_add_end -> next = nullptr;
         lines.last -> next = line_add_end;
         lines.last = line_add_end;
+
             return nullptr;
 }
 
 Line*
 get_line(Lines& lines, const string& name) {
     // TODO: найти линию под названием `name` в `lines` или создать и добавить её в конец.
+        Line* line_create = find_line(lines, name);
+    if (line_create == nullptr)
+    {
+        add_line(lines, name);
+            return line_create;
+    }
+    else
+    {
+            return line_create;
+    }
+}
     return nullptr;
 }
