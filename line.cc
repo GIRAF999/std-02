@@ -2,9 +2,17 @@
 
 using namespace std;
 
-Line*
+Line*find_line(Lines& lines, const string& name)
+
 find_line(Lines& lines, const string& name) {
-    // TODO: искать линию под названием `name` в списке `lines`.
+    // TODO: искать линию под названием `name` в списке `lines`/
+ Line*curtline = lines.first;
+	while(curtline != nullptr)
+    {
+		if (curtline -> name == name)
+                return curtline;
+		curtline = curtline -> next;
+	}
     return nullptr;
 }
 
